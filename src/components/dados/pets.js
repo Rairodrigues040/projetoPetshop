@@ -1,0 +1,66 @@
+// dados/pets.js
+const pets = [
+    {
+      tipo: "Gato",
+      nome: "João",
+      idade: 1,
+      genero: "Fêmea",
+      porte: "Médio",
+      descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+      vacinado: true,
+      castrado: true,
+    },
+    {
+        tipo: "Gato",
+        nome: "João",
+        idade: 1,
+        genero: "Fêmea",
+        porte: "Médio",
+        descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+        vacinado: true,
+        castrado: true,
+      },
+      {
+        tipo: "Gato",
+        nome: "João",
+        idade: 1,
+        genero: "Fêmea",
+        porte: "Médio",
+        descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+        vacinado: true,
+        castrado: true,
+      },
+      {
+        tipo: "Gato",
+        nome: "João",
+        idade: 1,
+        genero: "Fêmea",
+        porte: "Médio",
+        descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+        vacinado: true,
+        castrado: true,
+      },
+      {
+        tipo: "Gato",
+        nome: "João",
+        idade: 1,
+        genero: "Fêmea",
+        porte: "Médio",
+        descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+        vacinado: true,
+        castrado: true,
+      },
+      {
+        tipo: "Gato",
+        nome: "João",
+        idade: 1,
+        genero: "Fêmea",
+        porte: "Médio",
+        descricao: "João é um gato carinhoso que adora brincar e receber carinho. Muito sociável e bom com crianças.",
+        vacinado: true,
+        castrado: true,
+      },
+  ];
+  
+  export default pets;
+  

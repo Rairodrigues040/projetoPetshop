@@ -1,0 +1,57 @@
+.janela-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed; /* importante para ficar fixo na tela */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.618);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+  }
+  
+  .modal {
+    border: 1px solid red;
+    width: 90%;
+    background-color: #ffffff96;
+    backdrop-filter: blur(10px);
+    display: flex;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .img-modal {
+    background-image: url('/img/dog.png');
+    width: 50%;
+    height: 500px;
+    border: 1px solid red;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .descricao-popUp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
