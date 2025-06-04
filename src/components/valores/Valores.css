@@ -1,0 +1,134 @@
+.nossosValoresSection {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 81px;
+    margin: 81px 0;
+}
+
+/* Seções */
+.nossosValores, .comoAjudar {
+    max-width: 1335px;
+    padding: 22px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+.nossosValores {
+    display: block;
+    flex-direction: column;
+}
+
+.nossosValores .title {
+    color: .1F2937;
+    font-size: 31.5px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 57px;
+}
+
+.nossosValores .cardValores {
+    display: flex;
+    flex-direction: row;
+}
+
+.nossosValores .cardValores .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+
+.nossosValores .cardValores .card img {
+    width: 80px;
+    height: 80px;
+}
+
+.nossosValores .cardValores .card h1 {
+    font-size: 22.3px;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.nossosValores .cardValores .card h2 {
+    font-size: 19.1px;
+    font-weight: 400;
+    text-align: center;
+    color: #4B5563;
+}
+
+.comoAjudar {
+    background-color: #FEEDD6;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.comoAjudar .side {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.comoAjudar .side h1 {
+    font-size: 23.44px;
+    font-weight: 700;
+    color: .1F2937;
+}
+
+.comoAjudar .side h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: .4B5563;
+}
+
+.comoAjudar .side ul {
+    list-style-position: inside;
+}
+
+.comoAjudar .side ul li {
+    font-size: 15.13px;
+    font-weight: 400;
+    color: .4B5563;
+}
+
+.comoAjudar .side ul li::marker {
+    color: #F97316;
+    font-size: 20px;
+}
+
+
+.comoAjudar .side button {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #F97316;
+    color: white;
+    border-style: none;
+    font-size: 13.45;
+}
+
+.comoAjudar img {
+    border-radius: 9px;
+    max-width: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 700px) {
+    .nossosValores .cardValores {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .comoAjudar img {
+        display: none;
+    }
+}
