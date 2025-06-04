@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+    padding-bottom: 20px;
+    color: #555555; 
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+  }
+  
+  ul li {
+    margin-bottom: 15px;
+  }
+  
+  ul li::before {
+    content: "•";
+    color: #ED6921;
+    font-weight: normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px; 
+    padding: 10px 20px; 
+    border-radius: 8px;
+    background-color: #ED6921;
+    color: white;
+    border: none;
+    cursor: pointer;
+    /* Efeito para suavizar*/
+    transition: background-color 0.3s ease, transform 0.3s ease-out;
+    margin-left: 20px;
+    width: auto;
+    transform-origin: center; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    button:hover {
+      background-color: #e25b12;
+      transform: scale(1.1); /* Efeito de crescimento no hover para pcs */
+    }
+  }
+  /* testa para mobile */
+  button:active {
+    background-color: #e25b12;
+    transform: scale(1.07);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  /* container 3 */
+  .container-compartilhe {
+    max-width: 1050px;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #FFF7ED, #FFEDD5);
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  
+  .compartilhe-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .compartilhe-texto {
+    flex: 1;
+    min-width: 250px
+  }
+  
+  .img-compartilhe {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .titulo-com-icone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+  
+  .icone-titulo {
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333333; 
+  }
+  /*textos ul*/
+  .compartilhe-texto ul li {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555555;
+  }
+  
+  
+  /*texttos p*/
+  .compartilhe-texto p {
+    font-family: 'Quicksand', sans-serif; 
+    font-weight: 400; 
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555555;
+  }
+  
+  
+  /*textos h2*/
+  .compartilhe-texto h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333333;
+  }
+  
+  /*implementando botões para ficar grande ao passar o mouse */
+  
+  /* deu certo crscer ao passar o scroll */
+  /* Responsividade tentanto*/
+  @media (max-width: 768px) { /*so precisamos lembrar de separar ao botar pros meninos do react. mas é tranquilo*/
+    .contribua-flex,
+    .compartilhe-flex {
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+    }
+    .img-compartilhe {
+      order: -1;
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 350px; 
+    }
+      /* Ajustando o tamanho das imagens para telas menores */
+    .compartilhe-texto {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  
+    }
+  
+    ul {
+      padding-left: 0; 
+      display: inline-block;
+      text-align: left;
+    }
+  
+    button {
+      margin-left: 0; 
+      margin-top: 15px;
+    }
+  
+    .titulo-com-icone {
+      justify-content: center; 
+    }
+  }

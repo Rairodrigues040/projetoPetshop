@@ -1,57 +1,192 @@
 .janela-modal {
-    width: 100%;
-    height: 100vh;
-    position: fixed; /* importante para ficar fixo na tela */
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.618);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999;
-  }
-  
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.767);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.modal {
+  border: 1px solid red;
+  width: 90%;
+  max-width: 900px;
+  background-color: #fffffff0;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  position: relative;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-conteudo {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.coluna-esquerda, .coluna-direita {
+  flex: 1;
+}
+
+.img-modal {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.tipo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: orange;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.descricao-popUp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.idade-genero,
+.porte-peso {
+  display: flex;
+  gap: 16px;
+}
+
+.vacinado-castrado {
+  display: flex;
+  gap: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.coluna-direita h3 {
+  margin-top: 12px;
+}
+
+.coluna-direita ul {
+  padding-left: 18px;
+  margin: 4px 0;
+}
+
+.coluna-direita li {
+  margin-bottom: 4px;
+}
+
+.sobre-pet{
+  margin-top: 30px;
+}
+
+.sobre-pet p, .raca-pet p, .requisitos-pet li{
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.personalidade-pet ul{
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  margin: 8px 0;
+  padding: 0;
+}
+
+.personalidade-pet li{
+  border: 2px solid #1D4ED8;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 50px;
+  color: #1D4ED8;
+  font-weight: 700;
+}
+
+.button-pet button{
+  margin-top: 10px;
+  background-color: #e86d16;
+  border: none;
+  width: 100%;
+  padding: 4px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button-pet button:hover{
+  box-shadow: 2px 1px 6px rgba(25, 14, 2, 0.853);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
   .modal {
-    border: 1px solid red;
-    width: 90%;
-    background-color: #ffffff96;
-    backdrop-filter: blur(10px);
-    display: flex;
-    border-radius: 8px;
-    position: relative;
+    max-height: 95vh;
+    padding: 16px;
   }
-  
-  .img-modal {
-    background-image: url('/img/dog.png');
-    width: 50%;
-    height: 500px;
-    border: 1px solid red;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-  
-  .descricao-popUp {
-    display: flex;
+
+  .modal-conteudo {
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    flex: 1;
+    gap: 16px;
   }
-  
+
+  .coluna-esquerda, .coluna-direita {
+    width: 100%;
+  }
+
+  .img-modal {
+    height: 180px;
+  }
+
+  .personalidade-pet ul {
+    justify-content: flex-start;
+  }
+
+  .button-pet button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-modal {
+    height: 160px;
+  }
+
+  .personalidade-pet li {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
   .close {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    background-color: red;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
   }
-  
+}

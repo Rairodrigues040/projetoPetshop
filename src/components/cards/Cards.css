@@ -5,6 +5,20 @@
     font-family:'Times New Roman', Times, serif;
 }
 
+.container-cards {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background-color: #FCD8AC;
+
+    background-image: 
+        url('/img/pata.png'),   /* Pata à esquerda */
+        url('/img/osso.png');   /* Osso à direita inferior */
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 10px top 80px, right 40px bottom 40px;
+    background-size: 350px, 200px; /* Ajuste o tamanho conforme necessário */
+}
+
 .introduce-pets{
     padding: 10px;
     text-align: center;
@@ -30,23 +44,28 @@
     width: 351px;
     background-color: #f2f4f3;
     border-radius: 6PX;
+    cursor: pointer;
+    transition: .3s;
+}
+.pets:hover{
+    box-shadow: 4px 4px 10px rgba(1, 79, 131, 0.449);
 }
 
 .pet-image {
-    background-image: url('/img/gato.png');
-    width: 350px;
-    height: 200px;
+    width: 351px;
+    height: 230px;
     background-size: cover;
+    background-position: center;
     display: flex;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
 .pet p{
-    width: 50px;
+    width: 100%;
     text-align: center;
-    margin: 4px 4%;
-    background: rgba(0, 68, 255, 0.8);
+    margin: 8px 12%;
+    background-color: rgba(0, 68, 255, 0.8);
     color: #fff;
     padding: 4px 8px;
     border-radius: 40px;
@@ -54,6 +73,7 @@
 }
 
 .name-years{
+    
     padding-top: 16px;
     display: flex;
     justify-content: space-between;
@@ -65,22 +85,43 @@
     padding-top: 8px;
     display: flex;
     gap: 12px;
+    align-items: center;
 }
 
-.genero, .porte{
-    width: 50px;
-    border-radius: 30px;
-    padding: 2px;
-    text-align: center;
-}
-.genero p, .porte p{
-    font-size: 12px;
-    color: rgb(7, 87, 126);
+.porte{
+    color: rgba(0, 68, 255, 0.8);
     font-weight: bold;
 }
 
+.genero {
+    padding: 2px 12px;
+    border: 2px solid #BFDBFE; /* azul claro */
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    
+  }
+  
+  .genero p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .genero.macho p {
+    color: #2563EB; /* azul */
+  }
+  
+  .genero.femea p {
+    color: #D81DA0; /* rosa */
+  }
+  
+
 .subtitles-pet{
     margin: 20px 6%;
+    font-size: 14px;
 }
 
 .health{
@@ -91,7 +132,7 @@
 
 .vacinado {  
     background-color: #DCFCE7;
-    width: 70px;
+    width: 80px;
     border-radius: 30px;
     padding: 6px;
     text-align: center;
@@ -99,7 +140,7 @@
 
 .castrado{
     background-color: #DBEAFE;
-    width: 70px;
+    width: 80px;
     border-radius: 30px;
     padding: 6px;
     text-align: center;
@@ -126,4 +167,40 @@
     border-radius: 4px;
     background-color: #0789CF;
     color: #ffffff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.button:hover{
+    background-color: #03466a;
+}
+
+.button-card{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button-card button{
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #F97316;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.button-card button:hover{
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.704);
+}
+
+@media(max-width: 400px){
+    .container-cards{
+        padding-top: 10px;
+        background-color: #FCD8AC;
+        background-image: url('/img/pata.png');
+        background-repeat: no-repeat, no-repeat;
+        background-position: left -20px top 150px, right 40px bottom 40px;
+        background-size: 100px, 200px; /* Ajuste o tamanho conforme necessário */
+    } 
 }

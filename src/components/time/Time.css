@@ -1,0 +1,77 @@
+.time {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: rgb(255, 210, 160);
+    text-align: center;
+  }
+  
+  .titulo {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #000;
+  }
+  
+  .grid-equipe {
+    display: grid;
+    max-width: 800px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    justify-items: center;
+  }
+  
+  .card-membro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+  }
+  
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  
+  /* Cores */
+  .azul { background-color: rgb(58, 127, 255); }
+  .laranja { background-color: rgb(255, 130, 54); }
+  .roxo { background-color: rgb(149, 49, 228); }
+  .verde { background-color: rgb(41, 182, 104); }
+  .laranja-escuro { background-color: rgb(240, 105, 45); }
+  
+  .cargo {
+    font-weight: bold;
+    color: inherit;
+  }
+  
+  .descricao {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .titulo {
+      font-size: 1.5rem;
+    }
+  
+    .avatar {
+      width: 70px;
+      height: 70px;
+      font-size: 16px;
+    }
+  
+    .descricao {
+      font-size: 0.85rem;
+    }
+  }
+  

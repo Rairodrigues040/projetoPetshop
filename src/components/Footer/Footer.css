@@ -1,0 +1,169 @@
+.footer {
+    width: 100%;
+    height: auto; 
+    background-color: rgb(15, 47, 117);
+    margin: 0;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.logo p {
+    max-width: 300px;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.icones {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+
+.icones img {
+    width: 25px;
+    height: auto;
+}
+
+.links, .contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: white;
+    width: 200px; 
+}
+
+.links h3, .contato h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left; 
+    color: white;
+}
+
+.links a, .logo p, .contato a {
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover, .contato p:hover, .contato a:hover {
+    color: rgb(200, 200, 200); 
+}
+
+.contato1, .email, .loc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato img, .links img {
+    width: 20px;
+    height: auto;
+}
+
+.logo p {
+    max-width: 300px; 
+    word-wrap: break-word;
+    text-align: left;
+    margin: 0;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: 14px; 
+}
+
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-around; 
+    gap: 0; 
+}
+
+.separador {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px; 
+        gap: 15px; 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .logo img {
+        width: 150px; 
+    }
+
+    .logo p {
+        max-width: 250px; 
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .icones {
+        justify-content: center; 
+        gap: 10px;
+    }
+
+    .icones img {
+        width: 20px; 
+    }
+
+    .links, .contato {
+        width: 100%; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .links h3, .contato h3 {
+        font-size: 18px;
+    }
+
+    .links a, .contato a {
+        font-size: 14px;
+    }
+
+    .contato1, .email, .loc {
+        justify-content: center;
+    }
+}
