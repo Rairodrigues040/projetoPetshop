@@ -1,8 +1,8 @@
 import React from "react";
-import SecaoAdoteUmAmigo from "./components/adote/SecaoAdoteUmAmigo";
-import SecaoContribua from "./components/adote/SecaoContribua";
-import SecaoCompartilhe from "./components/adote/SecaoCompartilhe";
-import SecaoLaranja from "./components/adote/SecaoLaranja";
+import SecaoAdoteUmAmigo from "./SecaoAdoteUmAmigo";
+import SecaoContribua from "./SecaoContribua";
+import SecaoCompartilhe from "./SecaoCompartilhe";
+import SecaoLaranja from "./SecaoLaranja";
 
 const AdotePet = () => {
   return (

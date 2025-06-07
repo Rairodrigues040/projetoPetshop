@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCD8AC;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    gap: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container .patas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container img:first-child {
+    z-index: 1;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.container h1 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.container h4 {
+    font-size: 13px;
+    color: #7B8A99;
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    color: black;
+    text-align: left;
+    font-size: 14px;
+    margin: 8px 0 4px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container form input {
+    height: 40px;
+    font-size: 14px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+}
+
+.container form input:focus {
+    outline: none;
+    border-color: #ED6921;
+}
+
+.container form button {
+    height: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ED6921;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.container form button:hover {
+    background-color: #d95c1b;
+}
+
+.container label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #333;
+    gap: 6px;
+    text-align: left;
+}

@@ -1,20 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cards.css";
 
 const PetCard = ({
-  tipo,
   nome,
+  tipo,
   genero,
   porte,
   descricao,
+  foto,
   vacinado,
   castrado,
   abrirModal,
-  imgPets,
 }) => {
+  const navigate = useNavigate();
+
+  const irParaLogin = (e) => {
+    e.stopPropagation();  // IMPEDIR que clique no botão abra modal também
+    navigate("/login");
+  };
+
   return (
     <div className="pets" onClick={abrirModal}>
-      <div className="pet-image" style={{ backgroundImage: `url(${imgPets})` }}>
+      <div className="pet-image" style={{ backgroundImage: `url(${foto})` }}>
         <div className="pet">
           <p>{tipo}</p>
         </div>
@@ -46,7 +54,7 @@ const PetCard = ({
             </div>
           )}
         </div>
-        <button onClick={abrirModal} className="button">
+        <button onClick={irParaLogin} className="button">
           <p>Quero adotar</p>
         </button>
       </div>

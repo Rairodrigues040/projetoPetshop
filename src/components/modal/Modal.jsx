@@ -2,6 +2,7 @@ import React from "react";
 import "./Modal.css";
 import { SlCalender } from "react-icons/sl";
 import { IoPawOutline, IoClipboardOutline, IoLocationOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Modal = ({
   isOpen,
@@ -21,6 +22,13 @@ const Modal = ({
   castrado,
   requisitos,
 }) => {
+
+  const navigate = useNavigate();
+
+  const irParaLogin = () => {
+    navigate('/login');
+  }
+
   if (!isOpen) return null;
 
   return (
@@ -29,7 +37,6 @@ const Modal = ({
         <button className="close" onClick={onClose}>X</button>
 
         <div className="modal-conteudo">
-          {/* Lado esquerdo: imagem e dados rápidos */}
           <div className="coluna-esquerda">
             <h2>{nome}</h2>
             <div className="img-modal" style={{ backgroundImage: `url(${imagem})` }}>
@@ -60,7 +67,6 @@ const Modal = ({
             </div>
           </div>
 
-          {/* Lado direito: descrição detalhada */}
           <div className="coluna-direita">
             <div className="sobre-pet">
               <h3>Sobre a {nome}</h3>
@@ -75,7 +81,7 @@ const Modal = ({
             <div className="personalidade-pet">
               <h3>Personalidade</h3>
               <ul>
-                {personalidade.map((item, index) => (
+                {(Array.isArray(personalidade) ? personalidade : []).map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -84,13 +90,14 @@ const Modal = ({
             <div className="requisitos-pet">
               <h3>Requisitos para adoção</h3>
               <ul>
-                {requisitos.map((item, index) => (
+                {(Array.isArray(requisitos) ? requisitos : []).map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>
+
             <div className="button-pet">
-              <button>Tenho interesse</button>
+              <button onClick={() => irParaLogin()}>Tenho interesse</button>
             </div>
           </div>
         </div>

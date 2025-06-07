@@ -1,27 +1,39 @@
-import logo from '../header/img/logo.png';
-import './Header.css';
-import { useState } from 'react';
+import { PiPawPrintLight } from "react-icons/pi";
+import "./Header.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    console.log('Menu toggled:', !showMenu);
+    console.log("Menu toggled:", !showMenu);
+  };
+
+  const navigate = useNavigate();
+
+  const irParaLogin = () => {
+    navigate("/login");
   };
 
   return (
     <header className="header">
       <div className="logo">
-        <a href="#">
-          <img src={logo} alt="Logo" />
-        </a>
+        <div className="logo-central">
+          <div className="pata-logo">
+          <PiPawPrintLight color="EBE5C7" size={30} ali/>
+          </div>
+          <div className="title-logo">
+            <p>IncludePets</p>
+          </div>
+        </div>
       </div>
-      <nav className={`nav ${showMenu ? 'show' : ''}`}>
+      <nav className={`nav ${showMenu ? "show" : ""}`}>
         <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <button>Entrar</button>
+        <a href="#">Animais</a>
+        <a href="#">Sobre nós</a>
+        <button onClick={() => irParaLogin()}>Entrar</button>
       </nav>
       <div className="menuButton" onClick={toggleMenu}>
         <span className="linha"></span>

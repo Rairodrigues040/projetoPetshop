@@ -1,12 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import PetCard from "./PetCard";
 import Modal from "../modal/Modal";
-import pets from "../dados/pets";
-import petsDetalhados from "../dados/modalPets";
 import "./Cards.css";
 import "./TodosPets.css";
 
 const TodosPets = () => {
+  const [pets, setPets] = useState([]); // Estado para pets da API
   const [petSelecionado, setPetSelecionado] = useState(null);
   const [paginaAtual, setPaginaAtual] = useState(1);
   const [buscaNome, setBuscaNome] = useState("");
@@ -15,9 +14,41 @@ const TodosPets = () => {
 
   const petsPorPagina = 6;
 
-  const handleAbrirModal = (idPet) => {
-    const petDetalhado = petsDetalhados.find((p) => p.id === idPet);
-    setPetSelecionado(petDetalhado);
+  useEffect(() => {
+    fetch("http://localhost:5025/animais/listarAnimais", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome: "",
+        tipo: "",
+        porte: "",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === 1 && data.Animais) {
+          setPets(data.Animais);
+        } else {
+          console.error("Erro ao buscar animais:", data.mensagem);
+        }
+      })
+      .catch((error) => {
+        console.error("Erro na requisição:", error);
+      });
+  }, []);
+
+  // Função para montar URL completa da imagem
+  const urlImagemCompleta = (imagem) => {
+    if (!imagem) return "";
+    if (imagem.startsWith("http")) return imagem;
+    return `http://localhost:5025/${imagem}`;
+  };
+
+  // Abrir modal passando o pet selecionado inteiro
+  const handleAbrirModal = (pet) => {
+    setPetSelecionado(pet);
   };
 
   const limparFiltros = () => {
@@ -27,8 +58,8 @@ const TodosPets = () => {
     setPaginaAtual(1);
   };
 
-  const tipos = useMemo(() => [...new Set(pets.map(p => p.tipo))].sort(), []);
-  const portes = useMemo(() => [...new Set(pets.map(p => p.porte))].sort(), []);
+  const tipos = useMemo(() => [...new Set(pets.map((p) => p.tipo))].sort(), [pets]);
+  const portes = useMemo(() => [...new Set(pets.map((p) => p.porte))].sort(), [pets]);
 
   const petsFiltrados = pets.filter((pet) => {
     const nomeMatch = pet.nome.toLowerCase().includes(buscaNome.toLowerCase());
@@ -46,9 +77,7 @@ const TodosPets = () => {
     <div className="container-cards fade-in">
       <div className="introduce-pets">
         <h2>Animais para adoção</h2>
-        <p>
-          Conheça alguns dos nossos amiguinhos que estão procurando por um lar cheio de amor
-        </p>
+        <p>Conheça alguns dos nossos amiguinhos que estão procurando por um lar cheio de amor</p>
       </div>
 
       {/* Filtros */}
@@ -63,14 +92,18 @@ const TodosPets = () => {
         <select value={filtroTipo} onChange={(e) => setFiltroTipo(e.target.value)}>
           <option value="">Todos os tipos</option>
           {tipos.map((tipo) => (
-            <option key={tipo} value={tipo}>{tipo}</option>
+            <option key={tipo} value={tipo}>
+              {tipo}
+            </option>
           ))}
         </select>
 
         <select value={filtroTamanho} onChange={(e) => setFiltroTamanho(e.target.value)}>
           <option value="">Todos os tamanhos</option>
           {portes.map((porte) => (
-            <option key={porte} value={porte}>{porte}</option>
+            <option key={porte} value={porte}>
+              {porte}
+            </option>
           ))}
         </select>
 
@@ -83,7 +116,8 @@ const TodosPets = () => {
           <PetCard
             key={pet.id}
             {...pet}
-            abrirModal={() => handleAbrirModal(pet.id)}
+            abrirModal={() => handleAbrirModal(pet)}
+            imgPets={urlImagemCompleta(pet.foto || pet.imagem)} // ajuste para PetCard se precisar
           />
         ))}
       </div>
@@ -101,11 +135,14 @@ const TodosPets = () => {
         ))}
       </div>
 
+      {/* Modal */}
       {petSelecionado && (
         <Modal
           isOpen={true}
-          {...petSelecionado}
           onClose={() => setPetSelecionado(null)}
+          {...petSelecionado}
+          imagem={urlImagemCompleta(petSelecionado.foto || petSelecionado.imagem)}
+          requisitos={petSelecionado.requisitos_adocao || petSelecionado.requisitos}
         />
       )}
     </div>

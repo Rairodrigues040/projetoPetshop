@@ -1,98 +1,26 @@
 // dados/pets.js
-const pets = [
+  const pets = [
     {
       id: 1,
-      imgPets: "/img/petsCard/Luna.png",
-      tipo: "Gato",
       nome: "Luna",
+      tipo: "Gato",
       genero: "Fêmea",
       porte: "Médio",
-      descricao: "Luna é uma gatinha carinhosa que adora brincar e receber carinho. Muito sociável e boa com crianças.",
+      idade: "2",
+      peso: "3.5",
+      local: "Russas, CE",
+      descricao: "Luna é uma gatinha carinhosa...",
+      raca: "Sem raça definida",
+      personalidade: ["Carinhosa", "Brincalhona", "Sociável"],
       vacinado: true,
       castrado: true,
-    },
-    {
-      id: 2,
-        imgPets: "/img/petsCard/Thor.png",
-        tipo: "Cachorro",
-        nome: "Thor",
-        genero: "Macho",
-        porte: "Grande",
-        descricao: "Mimi é uma gatinha jovem e brincalhona. Muito curiosa e carinhosa, adora explorar novos cantinhos.",
-        vacinado: true,
-        castrado: true,
-      },
-      {
-        id: 3,
-        imgPets: "/img/petsCard/Mimi.png",
-        tipo: "Gato",
-        nome: "Mimi",
-        genero: "Fêmea",
-        porte: "Pequeno",
-        descricao: "Mimi é uma gatinha jovem e brincalhona. Muito curiosa e carinhosa, adora explorar novos cantinhos.",
-        vacinado: true,
-        castrado: false,
-      },
-      {
-        id: 4,
-        imgPets: "/img/petsCard/Buddy.png",
-        tipo: "Cachorro",
-        nome: "Buddy",
-        genero: "Macho",
-        porte: "Médio",
-        descricao: "Buddy é um cão amigável e energético que adora brincar no parque. Ideal para uma família ativa.",
-        vacinado: true,
-        castrado: true,
-      },
-      {
-        id: 5,
-        imgPets: "/img/petsCard/Rex.png",
-        tipo: "Cachorro",
-        nome: "Rex",
-        genero: "Macho",
-        porte: "Grande",
-        descricao: "Rex é muito carinhoso e protetor. Ideal para famílias com crianças, adora brincar no quintal.",
-        vacinado: true,
-        castrado: true,
-      },
-      {
-        id: 6,
-        imgPets: '/img/petsCard/Simba.png',
-        tipo: "Gato",
-        nome: "Simba",
-        genero: "Macho",
-        porte: "Grande",
-        descricao: "Simba é um gato independente mas carinhoso. Adora lugares altos e é muito observador.",
-        vacinado: true,
-        castrado: true,
-      },
-      {
-        id: 7,
-        imgPets: '/img/petsCard/Simba.png',
-        tipo: "Cobra",
-        nome: "Simba",
-        genero: "Macho",
-        porte: "Grande",
-        descricao: "Simba é um gato independente mas carinhoso. Adora lugares altos e é muito observador.",
-        vacinado: true,
-        castrado: true,
-      },
-      {
-        id: 8,
-        imgPets: '/img/petsCard/Simba.png',
-        tipo: "urso",
-        nome: "Simba",
-        genero: "Macho",
-        porte: "Grande",
-        descricao: "Simba é um gato independente mas carinhoso. Adora lugares altos e é muito observador.",
-        vacinado: true,
-        castrado: true,
-      },
-  ];
+      requisitos: ["Casa com tela", "Experiência com gatos", "Tempo para brincar"],
+      imagem: "/img/petsCard/Luna.png",
+    }
+      
+    ];
 
   export default pets
-  
-
   
 
   

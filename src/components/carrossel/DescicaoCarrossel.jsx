@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import React from "react";
-import './DescicaoCarrossel.css'
+import "./DescicaoCarrossel.css";
 
 const DescicaoCarrossel = () => {
+
+  const navigate = useNavigate();
+
+  const irParaLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="descricao-carrossel">
       <div className="title-descricao">
@@ -10,12 +18,20 @@ const DescicaoCarrossel = () => {
         </h1>
       </div>
       <div className="text-descricao">
-        <p>Nossos animais estão esperando por uma família que os ame incondicionalmente.</p>
-        <p>Seja essa família especial e faça a diferença na vida de um animal.</p>
+        <p>
+          Nossos animais estão esperando por uma família que os ame
+          incondicionalmente.
+        </p>
+        <p>
+          Seja essa família especial e faça a diferença na vida de um animal.
+        </p>
       </div>
       <div className="botoes-descicao">
-        <button className="animais-disponiveis"> Ver Animais Disponíveis</button>
-        <button className="como-ajudar"> Como Ajudar</button>
+        <button className="animais-disponiveis" onClick={irParaLogin}>
+          {" "}
+          Ver Animais Disponíveis
+        </button>
+        <button className="como-ajudar" onClick={irParaLogin}> Como Ajudar</button>
       </div>
     </div>
   );

@@ -1,62 +1,56 @@
+/* Estilo base do corpo */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #FAFAFA;
-    padding-bottom: 20px;
-    color: #555555; 
-  }
-  
-  .secao-laranja {
-    background-image: linear-gradient(to bottom, #FB923C, #F97316); /* Gradiente da seção laranja */
-    color: #F8FAFC; 
-    padding: 35px 20px;
-    text-align: center;
-  }
-  
-  
-  .secao-laranja h1 {
-      color: #FFFFFF;
-  }
-  
-  .secao-laranja p {
-      color: #F0F0F0; 
-      font-family: 'Quicksand', sans-serif; 
-      font-weight: 400; 
-      line-height: 1.6; 
-  }
-  
-  h1 {
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-weight: bold;
-  }
-  
-  
-  ul {
-    list-style-type: none;
-    padding-left: 20px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-  }
-  
-  ul li {
-    margin-bottom: 15px;
-  }
-  
-  ul li::before {
-    content: "•";
-    color: #ED6921;
-    font-weight: normal;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-  
-  
-    ul {
-      padding-left: 0; 
-      display: inline-block;
-      text-align: left;
-    }
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAFAFA;
+  color: #555555;
+}
+
+/* Seção laranja com gradiente e texto centralizado */
+.secao-laranja {
+  background-image: linear-gradient(to bottom, #FB923C, #F97316);
+  color: #F8FAFC;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.secao-laranja h1 {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.secao-laranja p {
+  color: #F0F0F0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Títulos gerais */
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Estilo da lista */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+ul li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 1em;
+}
+
+ul li::before {
+  content: "•";
+  color: #ED6921;
+  position: absolute;
+  left: 0;
+}
