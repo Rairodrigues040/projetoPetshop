@@ -6,6 +6,7 @@ import Login from './components/login/Login.jsx'
 
 import { createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import Cadastro from './components/cadastro/Cadastro.jsx'
+import Logado from './components/logado/Logado.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/cadastro",
     element: <Cadastro />
+  },
+  {
+    path: "/logadoUser",
+    element: <Logado />
   },
 ])
 

@@ -40,7 +40,7 @@ function Login() {
         if (tipo === "adm") {
           navigate("/");
         } else {
-          navigate("/cadastro");
+          navigate("/logadoUser");
         }
       } else {
         alert(
@@ -61,9 +61,9 @@ function Login() {
     e.preventDefault();
     const tipo = verificarTipoUsuario(email);
     if (tipo === "adm") {
-      navigate("/logado");
+      navigate("/logadoAdm");
     } else {
-      navigate("/painel-usuario");
+      navigate("/logadoUser");
     }
   };
 

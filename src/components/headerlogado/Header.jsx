@@ -14,7 +14,7 @@ function Header() {
   const navigate = useNavigate();
 
   const irParaLogin = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   return (

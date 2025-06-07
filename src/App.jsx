@@ -10,12 +10,12 @@ import Historia from "./components/historia/Historia";
 import Valores from "./components/valores/Valores";
 import CadastroAnimais from "./components/screens/CadastroAnimais";
 import TodosPets from "./components/cards/TodosPets";
-import Logado from "./components/logado/Logado";
+
 
 const App = () => {
   return (
     <div className="page">
-      {/* <Header />
+      <Header />
       <Carrossel/>
       <DescicaoCarrossel/>
       <Valores/>
@@ -24,8 +24,7 @@ const App = () => {
       <Time/>
       <CadastroAnimais/>
       <TodosPets/>
-      <Footer/> */}
-      <Logado />
+      <Footer/>
     </div>
   );
 };
