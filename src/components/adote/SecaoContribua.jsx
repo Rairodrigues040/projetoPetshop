@@ -25,7 +25,7 @@ const SecaoContribua = () => {
             <li>Materiais de higiene e limpeza</li>
             <li>Manutenção do abrigo e instalações</li>
           </ul>
-          <button>Faça uma Doação</button>
+          <button className="botao-ajudar">Faça uma Doação</button>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ function Valores() {
   const navigate = useNavigate();
 
   const irParaLogin = () => {
-    navigate("/login");
+    navigate("/adote");
   };
 
   return (

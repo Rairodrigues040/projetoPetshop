@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #FCD8AC;
-    font-family: Arial, sans-serif;
-}
-
 .container {
     display: flex;
     position: relative;
@@ -17,6 +12,8 @@ body {
     min-height: 100vh;
     flex-direction: column;
     gap: 10px;
+    background-color: #FCD8AC;
+    font-family: Arial, sans-serif;
 }
 
 .container .patas {
@@ -83,12 +80,15 @@ body {
     font-weight: bold;
     cursor: pointer;
     height: 40px;
+    width: 300px;
     font-size: 16px;
-    transition: opacity 0.3s ease;
+  
+    margin: auto;
 }
 
 .container form button:hover {
     opacity: 0.8;
+    transform: none;
 }
 
 .container form input {

@@ -7,6 +7,9 @@ import Login from './components/login/Login.jsx'
 import { createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import Cadastro from './components/cadastro/Cadastro.jsx'
 import Logado from './components/logado/Logado.jsx'
+import AdotePet from './components/adote/AdotePet.jsx'
+import CaminhoPet from './components/cardsLogado/CaminhoPet.jsx'
+import CadastroAnimais from './components/screens/CadastroAnimais.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "/logadoUser",
     element: <Logado />
+  },
+  {
+    path: "/adote",
+    element: <AdotePet />
+  },
+  {
+    path: "/caminhoPet",
+    element: <CaminhoPet />
+  },
+  {
+    path: "/cadastrarPets",
+    element: <CadastroAnimais />
   },
 ])
 

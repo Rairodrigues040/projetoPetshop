@@ -40,7 +40,7 @@ const Cards = () => {
   const navigate = useNavigate();
 
   const irParaLogin = () => {
-    navigate("/login");
+    navigate("/caminhoPet");
   };
 
   return (

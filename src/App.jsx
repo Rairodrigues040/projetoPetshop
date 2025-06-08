@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Historia from "./components/historia/Historia";
 import Valores from "./components/valores/Valores";
 import CadastroAnimais from "./components/screens/CadastroAnimais";
-import TodosPets from "./components/cards/TodosPets";
+import CaminhoPet from "./components/cardsLogado/CaminhoPet";
 
 
 const App = () => {
@@ -22,8 +22,6 @@ const App = () => {
       <Card />
       <Historia/>
       <Time/>
-      <CadastroAnimais/>
-      <TodosPets/>
       <Footer/>
     </div>
   );

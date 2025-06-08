@@ -34,7 +34,7 @@ body {
     margin-left: -1em;
   }
   
-  button {
+  .botao-ajudar {
     display: inline-flex;
     align-items: center;
     justify-content: center;

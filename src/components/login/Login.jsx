@@ -61,7 +61,7 @@ function Login() {
     e.preventDefault();
     const tipo = verificarTipoUsuario(email);
     if (tipo === "adm") {
-      navigate("/logadoAdm");
+      navigate("/cadastrarPets");
     } else {
       navigate("/logadoUser");
     }
@@ -99,7 +99,7 @@ function Login() {
 
         <a href="#">Esqueceu a senha?</a>
 
-        <button type="submit">Entrar</button>
+        <button className="button-login" onClick={irParaPaginas}>Entrar</button>
 
         <p>
           Não tem uma conta?{" "}

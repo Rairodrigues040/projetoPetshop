@@ -43,16 +43,16 @@ const PetCard = ({
           <p>{descricao}</p>
         </div>
         <div className="health">
-          {vacinado && (
+          { vacinado ? (
             <div className="vacinado">
               <p>Vacinado</p>
             </div>
-          )}
-          {castrado && (
+          ): ""}
+          {castrado ? (
             <div className="castrado">
               <p>Castrado</p>
             </div>
-          )}
+          ): ""}
         </div>
         <button onClick={irParaLogin} className="button">
           <p>Quero adotar</p>

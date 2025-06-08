@@ -23,7 +23,7 @@ const SecaoAdoteUmAmigo = () => {
             <li>Receba amor incondicional todos os dias</li>
             <li>Tenha acompanhamento pós-adoção gratuito</li>
           </ul>
-          <button>Quero Adotar</button>
+          <button className="botao-ajudar">Quero Adotar</button>
         </div>
         <img src={dog1} alt="imagem1" className="img-adote" />
       </div>

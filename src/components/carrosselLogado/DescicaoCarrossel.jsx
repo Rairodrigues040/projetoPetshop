@@ -7,7 +7,11 @@ const DescicaoCarrossel = () => {
   const navigate = useNavigate();
 
   const irParaLogin = () => {
-    navigate("/login");
+    navigate("/todosPets");
+  };
+
+  const irParaAdocao = () => {
+    navigate("/adote");
   };
 
   return (
@@ -31,7 +35,7 @@ const DescicaoCarrossel = () => {
           {" "}
           Ver Animais Disponíveis
         </button>
-        <button className="como-ajudar" onClick={irParaLogin}> Como Ajudar</button>
+        <button className="como-ajudar" onClick={irParaAdocao}> Como Ajudar</button>
       </div>
     </div>
   );
