@@ -1,6 +1,8 @@
 import React from "react";
 import './footer.css';
 import Logo from './logo_branca.png';
+import Facebook from './facebook.png'
+import Instagram from './instagram.png'
 import Email from './email.png'
 import Localização from './localização.png'
 import Telefone from './telefone.png'
@@ -19,20 +21,23 @@ function Footer(){
                         perfeito cheio de amor e cuidado.
                     </p>
                     <div className="icones">
+                        <a href="https://www.facebook.com/share/g/1AP2JNbuAb/"><img src={Facebook} alt="face" /></a>
+                        <a href="https://www.instagram.com/meuamigoperro?igsh=MXRxaWxzc3d5ZGgwZw%3D%3D&utm_source=qr"><img src={Instagram} alt="insta" /></a>
+                        
                     </div>
                 </div>
 
                 <div className="links">
                     <h3>Links rápidos</h3>
-                    <a href="#animais-disponiveis">Animais</a>
-                    <a href="#nossa-historia">Sobre nós</a>
-                    <a href="#valores">Como Ajudar</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#">Animais</a>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Como Ajudar</a>
+                    <a href="#">Contato</a>
                 </div>
 
                 <div className="contato">
                     <h3>Contato</h3>
-                    <div className="contato1" id = "contato">
+                    <div className="contato1">
                         <img src={Telefone} alt="telefone" />
                         <p>(88) 99999-9999</p>
                     </div>
