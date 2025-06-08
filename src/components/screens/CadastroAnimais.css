@@ -87,6 +87,15 @@
     resize: none;
 }
 
+.cadScreenBox .options .option .limit {
+    display: flex;
+    justify-content: flex-end;
+    color: #4B5563;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .cadScreenBox .stepsView {
     display: flex;
     flex-direction: column;
@@ -202,6 +211,7 @@
 
 .tipBox ul {
     list-style-position: inside;
+    display: block;
 }
 
 .tipBox ul li {
