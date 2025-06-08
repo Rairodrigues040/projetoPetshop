@@ -165,9 +165,7 @@ const CadArea = () => {
                   <option value="">Selecione</option>
                   <option value="Cachorro">Cachorro</option>
                   <option value="Gato">Gato</option>
-                  <option value="Coelho">Coelho</option>
                   <option value="Pato">Pato 🦆</option>
-                  <option value="Passaro">Pássaro</option>
                   <option value="Outro">Outro</option>
                 </select>
               </div>
@@ -219,8 +217,7 @@ const CadArea = () => {
                   >
                     <option value={-1}>Selecione</option>
                     <option value={1}>Sim</option>
-                    <option value={1}>Não</option>
-                    <option value={1}>Parcialmente</option>
+                    <option value={0}>Não</option>
                   </select>
                 </div>
               </div>
@@ -244,8 +241,7 @@ const CadArea = () => {
                   >
                     <option value={-1}>Selecione</option>
                     <option value={1}>Sim</option>
-                    <option value={1}>Não</option>
-                    <option value={1}>Agendado</option>
+                    <option value={0}>Não</option>
                   </select>
                 </div>
               </div>
@@ -296,10 +292,14 @@ const CadArea = () => {
                 <input
                   placeholder="Ex: Carinhoso, Brincalhão, Energético"
                   value={formData.personalidade}
-                  onChange={(e) =>
-                    handleChange("personalidade", e.target.value)
-                  }
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value.length <= 36) {
+                      handleChange("personalidade", value);
+                    }
+                  }}
                 />
+                <h6 className="limit">{formData.personalidade.length}/36</h6>
               </div>
             </div>
             <div className="options">
