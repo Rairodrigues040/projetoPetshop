@@ -4,7 +4,7 @@ import "../historia/Historia.css"
 
 const Historia = () => {
   return (
-    <div className="container-historia">
+    <div className="container-historia" id="nossa-historia" >
       <section className="nossa-historia">
         <h2>Nossa História</h2>
         <p>

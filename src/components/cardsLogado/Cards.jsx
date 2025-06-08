@@ -44,7 +44,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="container-cards">
+    <div className="container-cards" id= 'animais-disponiveis'>
       <div className="introduce-pets">
         <h2>Animais para adoção</h2>
         <p>

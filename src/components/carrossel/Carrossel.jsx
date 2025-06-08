@@ -22,7 +22,7 @@ function Carrossel() {
 
   return (
     <div className="fundo">
-      <div className="carrossel">
+      <div id="carrosel" className="carrosel">
         <img src={imagens[indiceAtual]} alt="Slide" className="imagem" />
 
         <div className="texto-central">

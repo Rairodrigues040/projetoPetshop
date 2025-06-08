@@ -24,15 +24,15 @@ function Footer(){
 
                 <div className="links">
                     <h3>Links rápidos</h3>
-                    <a href="#">Animais</a>
-                    <a href="#">Sobre nós</a>
-                    <a href="#">Como Ajudar</a>
-                    <a href="#">Contato</a>
+                    <a href="#animais-disponiveis">Animais</a>
+                    <a href="#nossa-historia">Sobre nós</a>
+                    <a href="#valores">Como Ajudar</a>
+                    <a href="#contato">Contato</a>
                 </div>
 
                 <div className="contato">
                     <h3>Contato</h3>
-                    <div className="contato1">
+                    <div className="contato1" id = "contato">
                         <img src={Telefone} alt="telefone" />
                         <p>(88) 99999-9999</p>
                     </div>

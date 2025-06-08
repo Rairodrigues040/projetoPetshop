@@ -30,9 +30,9 @@ function Header() {
         </div>
       </div>
       <nav className={`nav ${showMenu ? "show" : ""}`}>
-        <a href="#">Início</a>
-        <a href="#">Animais</a>
-        <a href="#">Sobre nós</a>
+        <a href="#carrosel">Início</a>
+        <a href="#animais-disponiveis">Animais</a>
+        <a href="#nossa-historia">Sobre nós</a>
         <button onClick={() => irParaLogin()}>Entrar</button>
       </nav>
       <div className="menuButton" onClick={toggleMenu}>

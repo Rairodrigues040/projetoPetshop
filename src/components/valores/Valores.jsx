@@ -54,7 +54,7 @@ function Valores() {
         </div>
       </div>
 
-      <div className="comoAjudar">
+      <div className="comoAjudar" id = 'valores'>
         <div className="side">
           <h1>Como Você Pode Ajudar</h1>
           <h2>

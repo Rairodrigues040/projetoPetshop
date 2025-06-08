@@ -16,7 +16,7 @@ function Valores() {
   };
 
   return (
-    <section className="nossosValoresSection">
+    <section className="nossosValoresSection" id ="valores">
       <div className="nossosValores">
         <div className="title">Nossos Valores</div>
         <div className="cardValores">
