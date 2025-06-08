@@ -8,9 +8,9 @@ const Historia = () => {
       <section className="nossa-historia">
         <h2>Nossa História</h2>
         <p>
-          Desde 2015, trabalhamos com dedicação para conectar animais
-          abandonados com famílias amorosas, transformando vidas e criando laços
-          especiais.
+          Desde 2025, trabalhamos com dedicação para conectar animais
+          abandonados com famílias amorosas, transformando vidas e
+          criando laços especiais.
         </p>
       </section>
 
@@ -18,20 +18,20 @@ const Historia = () => {
         <div className="enredo-texto">
           <h3>Como Tudo Começou</h3>
           <p>
-            A IncludePets nasceu do sonho de três amigos que, comovidos pela
-            situação de animais abandonados nas ruas de São Paulo, decidiram
-            fazer a diferença. Maria, João e Ana começaram resgatando animais em
-            seus próprios apartamentos.
+            A IncludePets nasceu do esforço de uma equipe de 6 pessoas
+            comprometidas com a causa animal. Comovidos com a situação
+            de abandono nas ruas, a equipe decidiu unir forças para fazer
+            a diferença, criando um site para ajudar a causa.
           </p>
           <p>
-            Com o tempo, perceberam que precisavam de uma estrutura maior e mais
-            organizada. Em 2015, fundaram oficialmente o AdotePet, começando com
-            um pequeno abrigo que comportava 20 animais.
+            Com o tempo, perceberam que poderiam facilitar ainda mais a conexão entre
+             protetores, ONGs e pessoas interessadas em adotar, centralizando informações
+              e divulgando animais disponíveis para adoção de forma prática e acessível.
           </p>
           <p>
-            Hoje, após 8 anos de dedicação, já ajudamos mais de 250 animais a
-            encontrarem seus lares definitivos e mantemos parcerias com
-            veterinários, pet shops e organizações do terceiro setor.
+            Hoje, com muito empenho e trabalho em equipe, ajudamos na divulgação
+            de vários animais e mantemos parcerias com pet shops e organizações
+            do terceiro setor para fortalecer a rede de apoio à adoção responsável.
           </p>
         </div>
         <div className="enredo-img">
