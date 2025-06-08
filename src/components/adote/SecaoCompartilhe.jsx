@@ -25,8 +25,12 @@ const SecaoCompartilhe = () => {
             <li>Indique nosso trabalho para amigos</li>
             <li>Participe de campanhas de conscientização</li>
           </ul>
-
+          <a href="https://www.instagram.com/meuamigoperro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          > 
           <button className="botao-ajudar">Siga-nos nas Redes</button>
+          </a>
         </div>
 
         <img src={dog3} alt="Pessoas felizes com animais" className="img-compartilhe" />
