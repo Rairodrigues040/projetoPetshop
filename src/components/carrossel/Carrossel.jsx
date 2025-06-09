@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Dog from "./img/petDog.png";
 import DogCat from "./img/DogCat.png";
-import Tigre from "./img/tigre.png";
-import Soin from "./img/soin.png";
-import Viado from "./img/viado.png";
-import "./Carrossel.css";
-import DescicaoCarrossel from "./DescicaoCarrossel";
+import Tigre from "./img/catRua.jpg";
+import Soin from "./img/dogRua.png";
+import Viado from "./img/patinho.webp";
+import './Carrossel.css'
 
 function Carrossel() {
   const imagens = [Dog, DogCat, Tigre, Soin, Viado];
@@ -22,7 +21,7 @@ function Carrossel() {
 
   return (
     <div className="fundo">
-      <div id="carrosel" className="carrosel">
+      <div className="carrossel" id ="carrosel">
         <img src={imagens[indiceAtual]} alt="Slide" className="imagem" />
 
         <div className="texto-central">

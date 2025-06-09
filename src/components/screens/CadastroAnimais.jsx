@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header/Header';
+import HeaderLogado from '../headerlogado/Header';
 import Footer from '../Footer/Footer';
 import './CadastroAnimais.css';
 import CadArea from './components/area';
@@ -9,7 +9,7 @@ const CadastroAnimais = () => {
 
   return (
     <div className="page">
-        <Header />
+        <HeaderLogado />
         <main className='cadScreen'>
             <CadArea/>
         </main>

@@ -67,6 +67,11 @@ function Login() {
     }
   };
 
+  const irParaCadastro = (e) => {
+    e.preventDefault();
+      navigate("/cadastro");
+  };
+
   return (
     <div className="container">
       <img src={Logo} alt="logo" />
@@ -103,7 +108,7 @@ function Login() {
 
         <p>
           Não tem uma conta?{" "}
-          <a href="#" onClick={irParaPaginas}>
+          <a href="#" onClick={irParaCadastro}>
             Criar conta
           </a>
         </p>

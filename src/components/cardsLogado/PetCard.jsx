@@ -9,6 +9,7 @@ const PetCard = ({
   porte,
   descricao,
   foto,
+  local,
   vacinado,
   castrado,
   abrirModal,
@@ -16,7 +17,7 @@ const PetCard = ({
   const navigate = useNavigate();
 
   const irParaLogin = (e) => {
-    e.stopPropagation();  // IMPEDIR que clique no botão abra modal também
+    e.stopPropagation(); // IMPEDIR que clique no botão abra modal também
     navigate("/login");
   };
 

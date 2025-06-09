@@ -10,6 +10,7 @@ import Logado from './components/logado/Logado.jsx'
 import AdotePet from './components/adote/AdotePet.jsx'
 import CaminhoPet from './components/cardsLogado/CaminhoPet.jsx'
 import CadastroAnimais from './components/screens/CadastroAnimais.jsx'
+import TodosPets from './components/cardsLogado/TodosPets.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/logadoUser",
     element: <Logado />
+  },
+  {
+    path: "/todosPets",
+    element: <TodosPets />
   },
   {
     path: "/adote",

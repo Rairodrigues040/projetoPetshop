@@ -1,7 +1,11 @@
 import React from "react";
 import "./Modal.css";
 import { SlCalender } from "react-icons/sl";
-import { IoPawOutline, IoClipboardOutline, IoLocationOutline } from "react-icons/io5";
+import {
+  IoPawOutline,
+  IoClipboardOutline,
+  IoLocationOutline,
+} from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const Modal = ({
@@ -15,31 +19,34 @@ const Modal = ({
   tipo,
   genero,
   raca,
-  local,
   descricao,
   personalidade,
   vacinado,
   castrado,
   requisitos,
 }) => {
-
   const navigate = useNavigate();
 
   const irParaLogin = () => {
-    navigate('/login');
-  }
+    navigate("/login");
+  };
 
   if (!isOpen) return null;
 
   return (
     <div className="janela-modal" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close" onClick={onClose}>X</button>
+        <button className="close" onClick={onClose}>
+          X
+        </button>
 
         <div className="modal-conteudo">
           <div className="coluna-esquerda">
             <h2>{nome}</h2>
-            <div className="img-modal" style={{ backgroundImage: `url(${imagem})` }}>
+            <div
+              className="img-modal"
+              style={{ backgroundImage: `url(${imagem})` }}
+            >
               <div className="tipo">
                 <p>{tipo}</p>
               </div>
@@ -47,22 +54,34 @@ const Modal = ({
 
             <div className="descricao-popUp">
               <div className="idade-genero">
-                <p><SlCalender /> {idade} anos</p>
-                <p><IoPawOutline /> {genero}</p>
+                <p>
+                  <SlCalender /> {idade} anos
+                </p>
+                <p>
+                  <IoPawOutline /> {genero}
+                </p>
               </div>
 
               <div className="porte-peso">
-                <p><IoClipboardOutline /> {porte}</p>
-                <p><IoClipboardOutline /> {peso} kg</p>
+                <p>
+                  <IoClipboardOutline /> {porte}
+                </p>
+                <p>
+                  <IoClipboardOutline /> {peso}
+                </p>
               </div>
 
               <div className="vacinado-castrado">
-                {vacinado && <div className="vacinado"><p>Vacinado</p></div>}
-                {castrado && <div className="castrado"><p>Castrado</p></div>}
-              </div>
-
-              <div className="localizacao">
-                <p><IoLocationOutline /> {local}</p>
+                {vacinado && (
+                  <div className="vacinado">
+                    <p>Vacinado</p>
+                  </div>
+                )}
+                {castrado && (
+                  <div className="castrado">
+                    <p>Castrado</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -81,18 +100,22 @@ const Modal = ({
             <div className="personalidade-pet">
               <h3>Personalidade</h3>
               <ul>
-                {(Array.isArray(personalidade) ? personalidade : []).map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                {(Array.isArray(personalidade) ? personalidade : []).map(
+                  (item, index) => (
+                    <li key={index}>{item}</li>
+                  )
+                )}
               </ul>
             </div>
 
             <div className="requisitos-pet">
               <h3>Requisitos para adoção</h3>
               <ul>
-                {(Array.isArray(requisitos) ? requisitos : []).map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                {(Array.isArray(requisitos) ? requisitos : []).map(
+                  (item, index) => (
+                    <li key={index}>{item}</li>
+                  )
+                )}
               </ul>
             </div>
 

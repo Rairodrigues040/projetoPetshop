@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Dog from "./img/petDog.png";
-import DogCat from "./img/DogCat.png";
-import Tigre from "./img/tigre.png";
-import Soin from "./img/soin.png";
-import Viado from "./img/viado.png";
-import "../carrossel/Carrossel.css"
+import DogCat from "../carrosselLogado/img/DogCat.png";
+import Tigre from "../carrosselLogado/img/catRua.jpg";
+import Soin from "../carrosselLogado/img/dogRua.png";
+import Viado from "../carrosselLogado/img/patinho.webp";
+import '../carrossel/Carrossel.css'
 
 function Carrossel() {
   const imagens = [Dog, DogCat, Tigre, Soin, Viado];
