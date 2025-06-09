@@ -9,7 +9,6 @@ const PetCard = ({
   porte,
   descricao,
   foto,
-  local,
   vacinado,
   castrado,
   abrirModal,
