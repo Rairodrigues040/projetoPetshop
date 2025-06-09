@@ -4,6 +4,8 @@ import Marina from "./marina.jpg";
 import Rai from "./rai.jpg";
 import Alice from "./alice.jpg";
 import Gustavo from "./gustavo.jpg";
+import Kaio from "./kaio.jpeg";
+import Alisson from "./Alisson.jpg"
 
 
 
@@ -12,6 +14,9 @@ const equipe = [
   { foto: Rai, nome: 'Raí Rodrigues', cargo: 'Dev Front-End', descricao: 'Cada linha de código aqui é por eles e por um final feliz. Adote!' },
   { foto: Alice, nome: 'Alice Lima', cargo: 'UI/UX Designer', descricao: 'Tenho dois cachorros adotados e sei bem o quanto essa causa importa!' },
   { foto: Gustavo, nome: 'Gustavo Santos', cargo: 'Dev Front-End', descricao: 'A energia e a alegria que meus pets trazem pro dia a dia não têm preço. Apoiar essa causa é apoiar o amor em sua forma mais pura.' },
+  { foto: Kaio, nome: 'Kaio Sousa', cargo: 'Dev Back-End', descricao: 'Sou uma mente lógica por trás das telas. Enquanto o usuário vê botões e cores, eu construo a engrenagem invisível que faz tudo funcionar.' },
+  { foto: Alisson, nome: 'Alisson Paz', cargo: 'UI/UX Designer', descricao: 'Sou apaixonado(a) por transformar ideias em experiências memoráveis. Uno estética e funcionalidade para criar interfaces que encantam visualmente.' },
+
   
 ];
 
